@@ -13,15 +13,15 @@ public class SecondMin {
         sc.close();
         int min1=Integer.MAX_VALUE;//1000
         int min2=Integer.MAX_VALUE;//1000
-        for(int x:arr){
-            if(x<min1){   //5 3 2 8 9
-                min2=min1;//1000
-                min1=x;//5
+            for(int x:arr){
+                if(x<=min1){   //5 3 2 8 9
+                    min2=min1;//1000
+                    min1=x;//5
+                }
+                else if(x<min2 && min1!=min2){
+                    min2=x;//5
+                }
             }
-            else if(x<min2 && min1!=min2){
-                min2=x;//5
-            }
-        }
-        System.out.print(min2);
-    }
-}
+        System.out.println(min2); 
+       }
+   }
