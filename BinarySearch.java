@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class BinarySearch {
-    public static void main(String[] args) {
+    public static void main(Alpha[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             int n=sc.nextInt();
             int arr[]=new int[n];

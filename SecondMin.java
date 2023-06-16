@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class SecondMin {
-    public static void main(String[] args) {
+    public static void main(Alpha[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the no. of element you want to take: ");
         int n=sc.nextInt();

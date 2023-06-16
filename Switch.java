@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Switch {
-    public static void main(String[] args) {
+    public static void main(Alpha[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.println("Enter two number: ");
             int a=sc.nextInt();

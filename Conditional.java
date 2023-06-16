@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Conditional {
-    public static void main(String[] args) {
+    public static void main(Alpha[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             /* Even or Odd */
 
