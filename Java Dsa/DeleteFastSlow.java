@@ -23,6 +23,9 @@ public class DeleteFastSlow {
         return head;
     }
     public static Node MiddleDelete(Node head){
+        if(head==null || head.next==null){
+
+        }
         Node fast=head;
         Node slow=head;
         Node prev=null;
