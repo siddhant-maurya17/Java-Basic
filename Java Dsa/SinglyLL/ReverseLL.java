@@ -1,3 +1,4 @@
+package SinglyLL;
 import java.util.Scanner;
 class Node{
     int data;
@@ -8,8 +9,8 @@ class Node{
         this.next=null;
     }
 }
-public class TailLL {
-    static Node InsertAtTail(Node head,int data){
+public class ReverseLL {
+    public static Node insertAtTail(Node head,int data){
         Node newNode=new Node(data);
         if(head==null){
             return newNode;
@@ -19,24 +20,26 @@ public class TailLL {
             curr=curr.next;
         }
         curr.next=newNode;
-
         return head;
     }
-    static void printNode(Node head){
-        while(head!=null){
-            System.out.print(head.data+" ");
-            head=head.next;
+    public static void printReverse(Node head){
+        if(head==null){
+            return;
         }
+        Node curr=head;
+     
+            printReverse(curr.next);
+            System.out.print(curr.data+" ");
     }
     public static void main(String[] args) {
-       try (Scanner sc = new Scanner(System.in)) {
+        Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         Node head=null;
         for(int i=0;i<n;i++){
             int data=sc.nextInt();
-            head=InsertAtTail(head,data);
+            head=insertAtTail(head,data);
         }
-        printNode(head);
-    } 
+        printReverse(head);
+        sc.close();
     }
 }

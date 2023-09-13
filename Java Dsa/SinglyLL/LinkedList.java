@@ -1,3 +1,4 @@
+package SinglyLL;
 import java.util.*;
 class Node{
     int data;

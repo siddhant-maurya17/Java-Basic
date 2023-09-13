@@ -1,3 +1,4 @@
+package SinglyLL;
 import java.util.*;
 class Node{
     int data;
@@ -25,7 +26,7 @@ public class HeadLL
         }
     }
     
-	public static void main(Alpha[] args) {
+	public static void main(String[] args) {
 		try (Scanner sc = new Scanner(System.in)) {
             int n=sc.nextInt();
             Node head=null;

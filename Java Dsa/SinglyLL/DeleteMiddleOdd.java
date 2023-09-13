@@ -1,4 +1,6 @@
-import java.util.Scanner;
+package SinglyLL;
+import java.util.*;
+
 class Node{
     int data;
     Node next;
@@ -8,11 +10,11 @@ class Node{
         this.next=null;
     }
 }
-public class ReverseLL {
+public class DeleteMiddleOdd {
     public static Node insertAtTail(Node head,int data){
-        Node newNode=new Node(data);
+       Node newNode=new Node(data);
         if(head==null){
-            return newNode;
+            return newNode; 
         }
         Node curr=head;
         while(curr.next!=null){
@@ -21,14 +23,25 @@ public class ReverseLL {
         curr.next=newNode;
         return head;
     }
-    public static void printReverse(Node head){
+    public static Node MiddleDelete(Node head,int k){
+        Node curr=head;
+        Node prev=null;
+        for(int i=0;i<k-1;i++){
+            prev=curr;
+            curr=curr.next;
+        }
+        prev.next=curr.next;
+        return head;
+        
+    }
+    public static void printlist(Node head){
         if(head==null){
             return;
         }
-        Node curr=head;
-     
-            printReverse(curr.next);
-            System.out.print(curr.data+" ");
+        while(head!=null){
+            System.out.print(head.data+" ");
+            head=head.next;
+        }
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -38,7 +51,8 @@ public class ReverseLL {
             int data=sc.nextInt();
             head=insertAtTail(head,data);
         }
-        printReverse(head);
+        head=MiddleDelete(head,(n/2)+1);
+        printlist(head);
         sc.close();
     }
 }
