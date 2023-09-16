@@ -1,4 +1,6 @@
-//Gfg Question
+package CircularLL;
+
+/*Gfg Question*/
 class Node
 {
 	int data;
