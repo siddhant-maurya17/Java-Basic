@@ -1,3 +1,4 @@
+package Inheritance;
 import java.util.*;
 class Parent{
     int sum(int a,int b){
